@@ -68,11 +68,15 @@ a {
   padding-top: 24px;
   padding-bottom: 24px;
   align-items: center;
+  border-bottom: 1px solid #e7e9fc;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .menu {
   display: flex;
   gap: 76px;
+  align-items: center;
 }
 
 .first-link {
@@ -83,6 +87,8 @@ a {
 .first-link_adress {
   display: flex;
   gap: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
   .logo {
@@ -93,6 +99,7 @@ a {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
+    margin-right: 76px;
   }
   .link {
     font-weight: 500;
@@ -144,6 +151,7 @@ section {
 .section_first {
   color: #FFFFFF;
   background-color: #2E2F42;
+  
 }
 
 .text-header {
@@ -153,6 +161,7 @@ section {
   max-width: 496px;
   letter-spacing: 0.02em;
   padding-top: 68px;
+  margin: 0 auto;
   
 }
 
@@ -167,9 +176,8 @@ section {
   padding: 16px 32px;
   height: 56px;
   margin-top: 48px;
-  display: block;
-  
 }
+
 .button:hover, button:active, button:focus {
   color: #FFFFFF;
   background-color: #404BBF;
