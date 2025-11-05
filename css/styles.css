@@ -80,8 +80,6 @@ a {
   display: flex;
   gap: 76px;
   align-items: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
  
 }
 
@@ -113,6 +111,8 @@ a {
     text-transform: uppercase;
     color: #4d5ae5;
     margin-right: 76px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .link {
     font-weight: 500;
