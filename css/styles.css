@@ -62,7 +62,7 @@ a {
   border-bottom: 1px solid #e7e9fc;
 }
 
-.page-header .container{
+.page-header {
   display: flex;
   justify-content: space-between;
   padding-top: 24px;
