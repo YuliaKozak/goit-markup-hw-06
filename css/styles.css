@@ -62,6 +62,13 @@ a {
   border-bottom: 1px solid #e7e9fc;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  max-width: 1158px;
+}
+
+
 .page-header {
   display: flex;
   justify-content: space-between;
