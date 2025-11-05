@@ -232,7 +232,7 @@ section {
  }
 
  .section_third .list-item {
-  width: calc((100% - 72px) / 4;
+  width: calc((100% - 72px) / 4);
  }
  
  .section_s_p {
@@ -304,8 +304,8 @@ margin-bottom: 8px;
 
 .footer .container {
   display: block;
-  max-width: 264px;
-  height: 112px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer {
@@ -313,9 +313,17 @@ margin-bottom: 8px;
   background-color: #2E2F42;
 }
 
+.logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
 .footer_p {
   line-height: 1.5;
   color: #F4F4FD;
   letter-spacing: 0.02em;
+  max-width: 264px;
+  width: 100%;
+  height: 112px;
 }
 /* #endregion footer */
