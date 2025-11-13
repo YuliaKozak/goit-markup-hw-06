@@ -409,6 +409,7 @@ svg {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
+  
 }
 
 .section_four .container .list-item_four .list_four {
@@ -458,19 +459,35 @@ svg {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-.portfolio-overlay {
+
+/*.section_four .container .list-item_four .list_four:hover .portfolio-overlay{
+  transform: translateY(0);
+}
+*/
+
+.list_four{
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list_four:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+
+.list_four_images {
+  position: relative;
+  overflow: hidden;
+
+}
+.p_portfolio-overlay {
   position: absolute;
-  background-color: #4D5AE5;
-  color: #F4F4FD;
+  background-color: #4d5ae5;
+  color: #f4f4fd;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.02em;
-  padding-left: 32px;
-  padding-top: 40px;
-  padding-right: 32px;
-  padding-bottom: 164px;
+  padding: 40px 32px;
   left: 0;
   top: 0;
   width: 100%;
@@ -479,11 +496,6 @@ svg {
   transform: translateY(100%);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.section_four .container .list-item_four .list_four:hover .portfolio-overlay{
-  transform: translateY(0);
-}
-
 
 /* #endregion section4 */
 
