@@ -716,12 +716,11 @@ form {
 
  .popup-review {
     position: absolute;
-    overflow: auto;
+    overflow: hidden;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 408px;
-    height: 80%;
     min-height: 584px;
     background: #fcfcfc;
     border-radius: 4px;
@@ -757,11 +756,6 @@ form {
    background-color: #404BBF;
    border: none;
    
- }
-
- .svg {
-   width: 8px;
-   height: 8px;
  }
 
  .form-close-icon {
