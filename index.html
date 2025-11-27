@@ -16,34 +16,46 @@
         <div class="container header-container"> 
             <nav class="menu" >
                 <a class= "logo" href="./index.html">Web<span style="color:#2e2f42 ">Studio</span></a>
-                <ul class="first-link">
-                    <li class="menu-list">
-                        <a class="link active" href="./index.html" >
-                            Studio
-                        </a>
-                    </li>
-                    <li class="menu-list">
-                        <a  class="link" href="">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li class="menu-list">
-                        <a  class="link" href="">
-                            Contacts
-                        </a>
-                    </li>
-                </ul>
+                
+                <div class="menu-wrapper">
+                    <ul class="first-link">
+                        
+                        <!-- Бургер-кнопка (мобільна) -->
+                        <button class="menu-toggle" aria-expanded="false">
+                            <svg width="32" height="32">
+                                <use href="./images/icons.svg#icon-mobile-menu"></use>
+                            </svg>
+                        </button>
+                        
+                        <li class="menu-list">
+                            <a class="link active" href="./index.html" >
+                                Studio
+                            </a>
+                        </li>
+                        <li class="menu-list">
+                            <a  class="link" href="">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li class="menu-list">
+                            <a  class="link" href="">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
+                
+                    <address class="adress">
+                        <ul class="first-link_adress">
+                            <li>
+                                <a class="link_adress" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            </li>
+                            <li>
+                                <a class="link_adress" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
             </nav>
-            <address class="adress">
-                <ul class="first-link_adress">
-                    <li>
-                        <a class="link_adress" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                    </li>
-                    <li>
-                        <a class="link_adress" href="tel:+110001111111">+11 (000) 111-11-11</a>
-                    </li>
-                </ul>
-            </address>
         </div>    
     </header>
     <!-- #endregion header-->
@@ -535,7 +547,7 @@
     <!-- #endregion footer-->
 
     <!-- #region popup-->
-    <div class="region-popup">
+    <div class="region-popup hide-popup">
         <div class="popup-review">
                     <button class="form-close" type="button">
                         
