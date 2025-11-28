@@ -923,6 +923,7 @@ svg {
 .footer .footer-subscribe{
   display: block;
   text-align: center;
+  margin-bottom: 96px;
 }
 .social-media_footer {
   margin-bottom: 16px;
@@ -970,38 +971,35 @@ svg {
 
 @media screen and (min-width: 768px) {
 .footer-container {
-    /*display: flex;*/
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: baseline;
     justify-content: center;
     text-align: center;
+  
   }
 
   .footer .footer-left {
     display: block;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin-right: 120px;
+
   }
-.footer-right,
-.footer-subscribe {
-  text-align: left;
-}
-.logo,
-.social-media_footer,
-.footer-subscribe {
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .footer .footer-right {
   display: block;
-  text-align: center;
+  text-align: left;
 }
 
 .footer .footer-subscribe {
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0;
+}
+.footer-form {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 96px;
 }
 
 }
@@ -1011,13 +1009,15 @@ svg {
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  justify-content: center;
+  text-align: center;
 }
 
 .footer .footer-left {
   display: block;
-  padding-top: 100px;
+  /*padding-top: 100px;
   padding-bottom: 100px;
-  margin-right: 120px;
+  margin-right: 120px;*/
 }
 
 }
