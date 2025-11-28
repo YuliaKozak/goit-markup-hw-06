@@ -85,13 +85,17 @@ a {
   display: none;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 1000;
+  overflow-y: auto;
 }
 
-.mobile-menu.open {
+.mobile-menu.is-open {
   display: flex;
 }
 
 .menu-close {
+  display: block;
+  cursor: pointer;
   align-self: flex-end;
   background: none;
   border: none;
@@ -651,8 +655,11 @@ section {
 /* #region section3 */
 
 .section_third {
+  display: flex;
+  flex-wrap: wrap;
   background-color: #F4F4FD;
   padding: 96px 0;
+  justify-content: center;
 }
 
 /* Заголовок */
@@ -684,6 +691,7 @@ section {
     0 1px 1px rgba(46, 47, 66, 0.16),
     0 1px 6px rgba(46, 47, 66, 0.08);
   overflow: hidden;
+  max-width: 264px;
 }
 
 /* ім'я + позиція */
@@ -756,7 +764,8 @@ svg {
   }
 
   .section_third .list-item-third .list {
-    flex-basis: calc((100% - 24px) / 2);
+    flex-basis: calc((100% - 24px)/2);
+    max-width: 264px;
   }
 }
 
@@ -792,6 +801,7 @@ svg {
    width: 100%;
    position: relative;
    overflow: hidden;
+   max-width: 360px;
  }
 
  /* Планшет - 2 стовпці */
@@ -806,6 +816,7 @@ svg {
 
    .section_four .container .list-item_four .list_four {
      width: calc((100% - 24px) / 2);
+     max-width: 360px;
    }
  }
 
