@@ -573,6 +573,7 @@ section {
 .text-info {
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .list-item {
   flex-basis: calc((100% - 24px)/2);
