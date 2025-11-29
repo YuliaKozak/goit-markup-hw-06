@@ -575,6 +575,7 @@ section {
  .text-info {
    flex-direction: row;
    flex-wrap: wrap;
+  gap: 12px;
  }
  .list-item {
    flex-basis: calc((100% - 72px)/4);
