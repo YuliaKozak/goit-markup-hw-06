@@ -57,6 +57,10 @@ a {
   max-width: 320px;
   display: flex;
   flex-direction: column;
+  align-content: space-between;
+  margin: 0 auto;
+
+
 }
 
 .first-link,
@@ -73,43 +77,54 @@ a {
   cursor: pointer;
   z-index: 999;
 }
-
-.menu-wrapper {
-  display: none;
-  /*  position: fixed;
-  inset: 0;
-  background: white;
-  padding: 40px;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 999;*/
+.menu-toggle:active {
+  background: transparent;
 }
 
+
 .mobile-menu {
-  display: none;
-  /*position: fixed;
+  position: fixed;
+  inset: 0;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   background: white;
   padding: 40px 16px;
-  display: none;
+
+  display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
+  opacity: 0;
   z-index: 1000;
-  overflow-y: auto;*/
+  overflow-y: auto;
+
+  
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.mobile-menu.is-open {
-  display: block;
+.mobile-menu .is-open {
+  opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
+
+.mobile-menu .menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 
 .menu-close {
-  display: block;
+  position: absolute;
   cursor: pointer;
-  align-self: flex-end;
+  margin-left: auto;
+    /* виштовхує в кінець вправо */
+    margin-right: 0;
+    margin-bottom: 24px;
   background: none;
   border: none;
 }
@@ -118,6 +133,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-bottom: 168px;
 }
 
 .mobile-nav-link {
@@ -135,6 +151,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-bottom: 48px;
 }
 
 .mobile-phone {
@@ -151,6 +168,7 @@ a {
   display: flex;
   gap: 24px;
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .page-header {
@@ -166,18 +184,24 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-left: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  margin: 0;
 }
+.menu{
+  display: flex;
+  gap: 149px;
+}
+
 
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
     gap: 10px;
-      margin: 0 auto;
-      padding: 0 15px;
+    margin: 0 auto;
+    padding: 0 15px;
   }
 
 .first-link,
@@ -219,7 +243,6 @@ a {
 
  .adress {
    display: flex;
-   padding: 24px 0;
  }
 
   .first-link {
@@ -268,7 +291,6 @@ a {
     bottom: -1px;
     width: 100%;
     height: 4px;
-    margin-bottom: 20px;
     border-radius: 2px;
     display: block;
     background-color: #404bbf;
@@ -284,6 +306,7 @@ a {
   }
 
   .link_adress {
+    font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
@@ -294,6 +317,10 @@ a {
   .link_adress:focus {
     color: #404bbf;
   }
+}
+
+.mobile-menu {
+  display: none;
 }
 
 
@@ -329,7 +356,9 @@ a {
     align-items: center;
     box-shadow: 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   }
-
+.mobile-menu {
+  display: none;
+}
 }
   
 /* #endregion header */
@@ -384,7 +413,7 @@ section {
 
 }
 .text-header {
-  font-size: 56px;
+  font-size: 36px;
   line-height: 1.07;
   text-align: center;
   max-width: 216px;
@@ -429,6 +458,7 @@ section {
 }
 
 .text-header {
+  font-size: 56px;
   max-width: 496px; 
 } 
 }
@@ -469,7 +499,7 @@ section {
 
   /* #region section2 */
 .section_second .container{
-  max-width: 228px;
+  max-width: 288px;
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
@@ -521,6 +551,7 @@ section {
 .text-info {
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 72px 24px;
   
 }
 .list-item {
@@ -742,7 +773,7 @@ svg {
  .section_four .container .list-item_four {
    display: flex;
    flex-direction: column;
-   gap: 16px;
+   gap: 48px;
    align-items: center;
  }
 
@@ -759,7 +790,7 @@ svg {
      flex-direction: row;
      flex-wrap: wrap;
      column-gap: 24px;
-     row-gap: 48px;
+     row-gap: 72px;
      justify-content: center;
    }
 
@@ -898,10 +929,9 @@ svg {
 }
 .logo {
   display: inline-block;
-  margin-bottom: 16px;
   
 }
-.logo, .social-media_footer, .footer-subscribe{
+.social-media_footer, .footer-subscribe{
   margin-left: auto;
   margin-right: auto;
 }
