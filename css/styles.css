@@ -51,13 +51,12 @@ a {
 /* #region header */
 
 /*mobile first header*/
+
+
 .header-container {
   max-width: 320px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
 }
 
 .first-link,
@@ -72,10 +71,24 @@ a {
   background: none;
   padding: 0;
   cursor: pointer;
+  z-index: 999;
+}
+
+.menu-wrapper {
+  display: none;
+  /*  position: fixed;
+  inset: 0;
+  background: white;
+  padding: 40px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 999;*/
 }
 
 .mobile-menu {
-  position: fixed;
+  display: none;
+  /*position: fixed;
   top: 0;
   right: 0;
   width: 100%;
@@ -86,11 +99,11 @@ a {
   flex-direction: column;
   justify-content: space-between;
   z-index: 1000;
-  overflow-y: auto;
+  overflow-y: auto;*/
 }
 
 .mobile-menu.is-open {
-  display: flex;
+  display: block;
 }
 
 .menu-close {
@@ -140,26 +153,8 @@ a {
   margin-top: 20px;
 }
 
-.menu-wrapper {
-  position: fixed;
-  inset: 0;
-  background: white;
-  padding: 40px;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 999;
-}
-
-.first-link,
-.adress {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
 .page-header {
-  border-bottom: 1px solid #e7e9fc;
+  border-bottom: none;
 }
 
 
@@ -179,12 +174,18 @@ a {
 
 @media screen and (min-width: 768px) {
   .container {
-    flex-direction: row;
-    flex-wrap: wrap;
+    max-width: 768px;
     gap: 10px;
+      margin: 0 auto;
+      padding: 0 15px;
   }
 
-
+.first-link,
+.adress {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
     .page-header {
       border-bottom: 1px solid #e7e9fc;
       padding: 0;
@@ -193,6 +194,7 @@ a {
     .header-container {
         max-width: 768px;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
@@ -311,7 +313,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    align-items: baseline;
     width: 1158px;
   }
 
@@ -319,11 +320,6 @@ a {
    flex-direction: row;
    gap: 40px;
 }
-
-  .menu-toggle {
-   display: none;
-   /* бургер ховаємо */
- }
 
   .page-header {
     display: flex;
@@ -334,59 +330,6 @@ a {
     box-shadow: 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   }
 
- 
-  .link {
-    display: block;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    padding-top: 24px;
-    padding-bottom: 24px;
-
-    position: relative;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .link.active {
-    color: #404bbf;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-
-  .link.active::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 4px;
-    margin-bottom: 20px;
-    border-radius: 2px;
-    display: block;
-    background-color: #404bbf;
-  }
-
-  .link:hover,
-  .link:focus {
-    color: #404bbf;
-  }
-
-  .adress {
-    font-style: normal;
-  }
-
-  .link_adress {
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .link_adress:hover,
-  .link_adress:focus {
-    color: #404bbf;
-  }
 }
   
 /* #endregion header */
@@ -412,6 +355,11 @@ section {
 }
 
   /* #region section1 */
+.section_first .container{
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+}  
 .section_first {
   color: #FFFFFF;
   background-color: #2E2F42;
@@ -573,7 +521,7 @@ section {
 .text-info {
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  
 }
 .list-item {
   flex-basis: calc((100% - 24px)/2);
