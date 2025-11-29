@@ -76,6 +76,7 @@ a {
   padding: 0;
   cursor: pointer;
   z-index: 999;
+  margin: 0;
 }
 .menu-toggle:active {
   background: transparent;
@@ -100,34 +101,28 @@ a {
   overflow-y: auto;
 
   
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 1s ease, visibility 1s ease;
+    
 }
 
-.mobile-menu .is-open {
+.mobile-menu.is-open {
   opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
 
 .mobile-menu .menu-close {
-  position: absolute;
+
   top: 20px;
   right: 20px;
-}
-
-
-.menu-close {
-  position: absolute;
+  margin-bottom: 24px;
   cursor: pointer;
-  margin-left: auto;
-    /* виштовхує в кінець вправо */
-    margin-right: 0;
-    margin-bottom: 24px;
-  background: none;
-  border: none;
+    background: none;
+    border: none;
 }
+
 
 .mobile-nav-list {
   display: flex;
@@ -317,10 +312,10 @@ a {
   .link_adress:focus {
     color: #404bbf;
   }
-}
 
 .mobile-menu {
   display: none;
+}
 }
 
 
@@ -339,7 +334,7 @@ a {
   .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 1158px;
   }
 
